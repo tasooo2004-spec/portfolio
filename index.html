@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تراثنا</title>
+
+  <!-- رابط CSS الموقع -->
+  <link rel="stylesheet" href="n.css" />
+
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- رابط CSS الهيرو الخاص -->
+  <link rel="stylesheet" href="hero.css" />
+</head>
+
+<body>
+
+<div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="صورة 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="صورة 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="صورة 3"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="صورة 4"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="صورة 5"></button>
+  </div>
+
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="imges/img1.jpg" class="d-block w-100 hero-img" alt="صورة 1">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+          <h1 class="animated-text">مرحبًا بكم في موقع <span>تراثنا</span></h1>
+          <p>حكاية ليبيا.. من رمالها إلى بحرها،من لباسها إلى نغمتها.</p>
+          <a href="#home" class="hero-btn">ابدأ رحلتك</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imges/ppp.jpg" class="d-block w-100 hero-img" alt="صورة 2">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+          <h1 >مرحبًا بكم في موقع <span>تراثنا</span></h1>
+          <p >حكاية ليبيا.. من رمالها إلى بحرها،من لباسها إلى نغمتها.</p>
+          <a href="#home" class="hero-btn">ابدأ رحلتك</a>
+      </div>
+    </div>
+     <div class="carousel-item">
+      <img src="imges/u2.jpg" class="d-block w-100 hero-img" alt="صورة 2">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+          <h1>مرحبًا بكم في موقع <span>تراثنا</span></h1>
+          <p>حكاية ليبيا.. من رمالها إلى بحرها،من لباسها إلى نغمتها.</p>
+          <a href="#home" class="hero-btn">ابدأ رحلتك</a>
+      </div>
+    </div>
+
+     <div class="carousel-item">
+      <img src="imges/qq.jpg" class="d-block w-100 hero-img" alt="صورة 2">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+          <h1>مرحبًا بكم في موقع <span>تراثنا</span></h1>
+          <p>حكاية ليبيا.. من رمالها إلى بحرها،من لباسها إلى نغمتها.</p>
+          <a href="#home" class="hero-btn">ابدأ رحلتك</a>
+      </div>
+    </div>
+
+    <!-- باقي الصور بنفس النمط -->
+  </div>
+
+  <!-- Navigation -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">السابق</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">التالي</span>
+  </button>
+</div>
+
+<!-- ===== Header الموقع ===== -->
+  <header class="heroo">
+      <h1 class="hleoo">تراثنا</h1>
+      <nav class="bloo">
+          <ul>
+              <li class="homme"><a href="#heroCarousel">الرئيسية</a></li>
+              <li class="clothess"><a href="#section-fashion">الأزياء التقليدية</a></li>
+              <li class="food"><a href="#food-section">الأكلات الشعبية</a></li>
+              <li><a href="#section-flip">كلام زمان </a></li>
+              <li class="phone"><a href="#footerf">تواصل معنا</a></li>
+
+                 <!-- أيقونة الصوت -->
+      <li class="audio-icon">
+        <i class="fa-solid fa-volume-high" id="audioControl"></i>
+      </li>
+    </ul>
+          </ul>
+      </nav>
+  </header>
+
+  <!-- ملف الصوت -->
+<audio id="heritageAudio" loop>
+  <source src="audio/Band-from-southern-city-of-Sabha-jibaha.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- ===== Cards Section ===== -->
+  <section class="cards" id="services">
+    <h2 class="title">لمحة عن موقعنا</h2>
+    <div class="content">
+      <div class="card">
+        <div class="icon"><i class="fa-brands fa-pagelines"></i></div>
+        <div class="info">
+          <h3>هويتنا</h3>
+          <p>نحافظ على التراث الليبي ونقدمه بألوانه وأصالته لكل الأجيال.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-regular fa-paper-plane"></i></div>
+        <div class="info">
+          <h3>رسالتنا</h3>
+          <p>نهدف لتعليم الزائرين عن ثقافة ليبيا بطريقة جذابة وسهلة الفهم.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-regular fa-heart"></i></div>
+        <div class="info">
+          <h3>رؤيتنا</h3>
+          <p>جعل التراث الليبي حيّاً ومتفاعلاً، يربط الماضي بالحاضر ويُلهم المستقبل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Main Section Features ===== -->
+  <section class="main-section" id="home">
+    <h2 class="tasoo">اكتشف تراثنا</h2>
+
+    <div class="card-grid">
+      <!-- كروت الأزياء، الأكل، الأماكن كما في كودك السابق -->
+      <article class="feature-card">
+        <img class="feature-img" src="imges/libas.jpg" alt="أزياء تقليدية">
+        <div class="feature-overlay"></div>
+        <div class="feature-content">
+          <h3 class="feature-title">الأزياء التقليدية</h3>
+          <p class="feature-desc">تعرف على اللباس التقليدي.</p>
+          <a class="feature-btn" href="#section-fashion"> اكتشف الان </a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <img class="feature-img" src="imges/magrod.jpg" alt="أكلات شعبية">
+        <div class="feature-overlay"></div>
+        <div class="feature-content">
+          <h3 class="feature-title">الأكلات الشعبية</h3>
+          <p class="feature-desc">تعرف على أشهر الأكلات التقليدية.</p>
+          <a class="feature-btn" href="#food-section">اكتشف الان </a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <img class="feature-img" src="imges/as.jpg" alt="ناس زمان ">
+        <div class="feature-overlay"></div>
+        <div class="feature-content">
+       <h3 class="feature-title">كلام زمان</h3>
+<p class="feature-desc">تعرف على حكايات الماضي وتراث أجدادنا.</p>
+<a class="feature-btn" href="#section-flip">اكتشف الآن</a>
+        </div>
+      </article>
+    </div>
+  </section>
+<!-- ===== Fashion Swiper Section ===== -->
+  <section id="section-fashion" class="section-target">
+    <h3 >الأزياء التقليدية</h3>
+    <div class="swiper fashion-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c8.jpg" alt="زي تقليدي 1"><div class="slide-overlay"><h4>  الجبة الطرابلسية</h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c7.jpg" alt="زي تقليدي 2"><div class="slide-overlay"><h4> الردي البوري </h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c6.jpg" alt="زي تقليدي 3"><div class="slide-overlay"><h4> الزبون </h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c5.jpg" alt="زي تقليدي 4"><div class="slide-overlay"><h4> العبروق الليبي </h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c4.jpg" alt="زي تقليدي 5"><div class="slide-overlay"><h4>  الزي التارقي</h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c3.jpg" alt="زي تقليدي 6"><div class="slide-overlay"><h4> البدلة الصغيرة </h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c2.jpg" alt="زي تقليدي 7"><div class="slide-overlay"><h4>الجرد  </h4></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/c1.jpg" alt="زي تقليدي 8"><div class="slide-overlay"><h4>الجلوة</h4></div></div></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+    <section id="food-section" class="section-target">
+    <h3>الأكلات الشعبية </h3>
+    <div class="swiper fashion-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z1.jpg" alt="زي تقليدي 1"><div class="slide-overlay"><h4>الغريبة  </h4><p>حلوى ليبية تقليدية تُحضّر بالدقيق والسمن، وتُقدَّم في المناسبات مع الشاي.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z2.jpg" alt="زي تقليدي 2"><div class="slide-overlay"><h4>البازين  </h4><p>أشهر أكلة ليبية، تُحضّر من دقيق الشعير وتُقدَّم مع المرق واللحم.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z3.jpg" alt="زي تقليدي 3"><div class="slide-overlay"><h4>السفنز  </h4><p> عجينة مقلية ذهبية اللون، تُؤكل ساخنة وتشتهر في الصباحات الشعبية.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z4.jpg" alt="زي تقليدي 4"><div class="slide-overlay"><h4>المبطّن  </h4><p> بطاطا محشية باللحم والتوابل، تُقلى أو تُخبز وتُعد من الأكلات المحبوبة.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z7.jpg" alt="زي تقليدي 5"><div class="slide-overlay"><h4>  رشته مبكبكه </h4><p>    طبق ليبي شهير مطبوخ بصلصة حمراء وتوابل حارة بنكهة مميزة   .</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z8.jpg" alt="زي تقليدي 6"><div class="slide-overlay"><h4>  بكلاوة</h4><p>   حلوى ليبية فاخرة بطبقات مقرمشة ومحشوة بالمكسرات والعسل.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z5.jpg" alt="زي تقليدي 7"><div class="slide-overlay"><h4>  عبنبر</h4><p>حلويات ليبية تقليدية تُقدَّم غالبًا في الأعراس والمناسبات الخاصة.</p></div></div></div>
+        <div class="swiper-slide"><div class="slide-img"><img src="imges/z10.jpg" alt="زي تقليدي 8"><div class="slide-overlay"><h4>  مكرونه مبكبكه</h4><p>    مكرونة مطبوخة بطريقة ليبية تقليدية مع صلصة حارة ونكهة مميزة .</p></div></div></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+
+  <!-- ===== Flip Section ===== -->
+  <section class="section-flip">
+    <h2 class="title">قالو ناس زمان...</h2>
+    <div class="flip-wrap" >
+      <!-- كل Flip Card كما عندك سابقاً -->
+      <div class="flip-card" ><div class="flip-inner"><div class="flip-front"><img src="imges/a5.jpg" alt=""></div><div class="flip-back"><div class="back-text">ياسعد من عنده رفيق يوده وقت يعثر من الطياح يشده.</div></div></div></div>
+      <div class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="imges/a1.jpg" alt=""></div><div class="flip-back"><div class="back-text">دير المليحة وانساها كان عشت علي طول الزمان تلقاها.</div></div></div></div>
+      <div class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="imges/a2.jpg" alt=""></div><div class="flip-back"><div class="back-text">لا تلبس حاجه مش قدك ولا علي حاجه فارغة تندب خدك ولا تصدق كل واحد قالك نحبك.</div></div></div></div>
+      <div class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="imges/a6.jpg" alt=""></div><div class="flip-back"><div class="back-text">شوية من الحنة وشوية من رطابة الايدين.</div></div></div></div>
+      <div class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="imges/a4.jpg" alt=""></div><div class="flip-back"><div class="back-text">ياشاقي بهم ناس همك من هو شاقي بيه همك دايرله عساس وهم الناس اتزازي بيه</div></div></div></div>
+      <div class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="imges/HO.jpg" alt=""></div><div class="flip-back"><div class="back-text">الشكل من خلق ربي و ماعندك عليه سلطان والفعل تصنعه بيدك وتلونه بالألوان والكلمة الطيبة تعدل الميزان</div></div></div></div>
+    </div>
+  </section>
+ 
+
+
+
+
+
+<footer class="site-footer" id="footerf">
+  <h3>ابقى على تواصل معنا</h3>
+  <!-- Social Icons -->
+  <div class="footer-icons">
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="tel:+218912345678"><i class="fas fa-phone"></i></a>
+  </div>
+
+
+  <!-- الفورم -->
+  <form class="footer-form" id="footerForm">
+    <input type="email" id="emailInput" placeholder="أدخل بريدك الإلكتروني" required>
+    <textarea id="opinionInput" placeholder="اكتب رأيك هنا" rows="3" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+
+  <!-- زر البحث (أيقونة فقط) -->
+  <button id="showOpinions" class="search-btn" title="بحث">
+    <i class="fas fa-search"></i>
+  </button>
+
+  <!-- صندوق مخفي للآراء -->
+  <div id="opinionsContainer">
+    <input type="text" id="searchInput" placeholder="بحث داخل الآراء...">
+    <div id="opinionsList"></div>
+  </div>
+
+  <p class="footer-copy">&copy; 2025 تراثنا. كل الحقوق محفوظة.</p>
+</footer>
+
+
+
+
+  <!-- JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+  <!-- ===== روابط أيقونات Font Awesome ===== -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+</body>
+</html>
+
+
+  
+
+
