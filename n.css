@@ -54,6 +54,14 @@ nav.bloo ul li a:hover {
     transform: scale(1.05);
 }
 
+/* زر القائمة */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
 /* === Hero Section === */
 .hero-carousel {
     position: relative;
@@ -217,8 +225,6 @@ h1, h2, .site-title {
     padding: 20px;
 }
 
-@media(max-width:900px) { .card-grid { grid-template-columns: repeat(2,1fr); } }
-@media(max-width:600px) { .card-grid { grid-template-columns: 1fr; } }
 
 .feature-card {
     position: relative;
@@ -486,20 +492,7 @@ h1, h2, .site-title {
     font-size: 12px;
     color: #eee;
 }
-/* === Media Queries === */
-@media (max-width: 900px) {
-    .card-grid { grid-template-columns: repeat(2, 1fr); }
-    .flip-wrap { grid-template-columns: repeat(2, 1fr); }
-    .slide-img { max-width: 200px; aspect-ratio: 1 / 1.18; }
-}
 
-@media (max-width: 600px) {
-    .card-grid { grid-template-columns: 1fr; }
-    .flip-wrap { grid-template-columns: 1fr !important; justify-items: center !important; }
-    .flip-card { width: 270px; height: 290px; }
-    .flip-back { font-size: 17px; }
-    .slide-img { max-width: 160px; aspect-ratio: 1 / 1.2; }
-}
 /* === عنوان فيه انميشن === */
 .animated-text span {
     opacity: 0;
@@ -668,6 +661,346 @@ h1, h2, .site-title {
   color:#6b5b3e;
   font-size:13px;
 }
+#opinionsContainer {
+  display: none;
+  background: #fff;
+  margin: 20px auto;
+  padding: 15px;
+  width: 95%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#opinionsContainer h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #6b5b3e;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.opinion-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+
+
+
+
+
+/* ===== Media Queries محسنة لجميع السكشنات ===== */
+
+/* شاشات متوسطة حتى 900px */
+@media (max-width: 900px) {
+
+    /* الهيدر */
+    header.heroo {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;
+    }
+    header h1.hleoo {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    nav.bloo ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    nav.bloo ul li a {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero-carousel .carousel-item {
+        height: 70vh;
+    }
+    .hero-overlay h1, .carousel-caption h1 {
+        font-size: 2.5em;
+    }
+    .hero-overlay p, .carousel-caption p {
+        font-size: 1.2em;
+    }
+    .hero-btn, .carousel-caption .hero-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Cards Section */
+    .card {
+        width: 90%;
+        max-width: 300px;
+        padding: 30px;
+        margin: 25px auto;
+    }
+    .info h3 {
+        font-size: 1.2em;
+    }
+    .info p {
+        font-size: 14px;
+    }
+    .content {
+        gap: 25px;
+        justify-content: center;
+    }
+
+    /* Feature Cards */
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 20px;
+    }
+    .feature-title {
+        font-size: 18px;
+    }
+    .feature-desc {
+        font-size: 13px;
+    }
+    .feature-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* Flip Cards */
+    .flip-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .flip-card {
+        width: 280px;
+        height: 320px;
+    }
+    .flip-back {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* Slide Images */
+    .slide-img {
+        max-width: 250px;
+        aspect-ratio: 1 / 1.25;
+    }
+    .slide-overlay h4 {
+        font-size: 15px;
+    }
+    .slide-overlay p {
+        font-size: 13px;
+    }
+
+    /* Section Titles */
+    .title, .tasoo, h2 {
+        font-size: 2.3em;
+        margin-top: 50px;
+        margin-bottom: 35px;
+    }
+
+    /* Section Targets */
+    .section-target {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+    .section-target h3 {
+        font-size: 20px;
+    }
+    .section-target p {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .site-footer h3 {
+        font-size: 22px;
+    }
+    .footer-form input, .footer-form textarea {
+        width: 90%;
+        font-size: 13px;
+    }
+    .footer-form button {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+  /* ===== كل السكشنات العادية ===== */
+  section:not(.section-flip):not(#section-fashion):not(#food-section) {
+    padding: 40px 16px;
+    margin-bottom: 45px;
+  }
+
+  /* ===== العناوين ===== */
+  .title,
+  .tasoo,
+  h2 {
+    font-size: 2.4em;
+    margin: 35px 0;
+    text-align: center;
+  }
+
+  /* ===== Cards Section ===== */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 35px;
+  }
+
+  /* ===== Feature Cards ===== */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .feature-img {
+    height: 300px;
+  }
+
+  .feature-title {
+    font-size: 22px;
+  }
+
+  .feature-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ===== Flip Cards ===== */
+  .flip-wrap {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 360px;
+    height: 420px;
+  }
+
+  .flip-back {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  /* ===== Sections النصية ===== */
+  .section-target {
+    padding: 25px;
+    margin: 30px 12px;
+  }
+
+  .section-target h3 {
+    font-size: 24px;
+  }
+
+  .section-target p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ===== Footer فقط ===== */
+  .site-footer {
+    padding: 45px 16px;
+  }
+
+  .site-footer h3 {
+    font-size: 22px;
+  }
+
+  .footer-form input,
+  .footer-form textarea {
+    width: 100%;
+    max-width: 340px;
+    font-size: 15px;
+  }
+}
+
+
+/* زر القائمة */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333; /* لون الأيقونة مناسب على أي خلفية */
+    background: none;
+    border: none;
+    padding: 5px 10px;
+}
+
+
+/* responsive menu عند عرض أقل من 768px */
+@media screen and (max-width: 768px) {
+    nav.bloo ul {
+        position: absolute; /* أسفل الهدر مباشرة */
+        top: 100%; /* أسفل الهدر */
+        left: 0;
+        width: 100%; /* عرض كامل المتصفح */
+        background-color: rgba(255, 255, 255, 0.7); /* شفاف مع لمسة بيج فاتح */
+        backdrop-filter: blur(5px); /* تأثير ضبابي أنيق */
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transform: translateY(-20px); /* يبدأ قريب من الهدر */
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 50;
+    }
+
+    nav.bloo ul.show {
+        transform: translateY(0); /* تنزل من الهدر */
+        opacity: 1;
+    }
+
+    nav.bloo ul li {
+        list-style: none;
+        text-align: center;
+    }
+
+    nav.bloo ul li a {
+        font-size: 18px;
+        color: #6b5b3e;/* لون الخط مناسب على الخلفية الشفافة */
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease, color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    nav.bloo ul li a:hover {
+        background-color: rgba(200, 180, 150, 0.3); /* لمسة عند المرور */
+          color: #a28f6a;
+    }
+
+    /* زر القائمة يظهر فقط على الشاشات الصغيرة */
+    .menu-btn {
+        display: block;
+    }
+}
+
+
 
 
 
