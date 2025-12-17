@@ -25,6 +25,8 @@
 
   <!-- رابط CSS الهيرو الخاص -->
   <link rel="stylesheet" href="hero.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -94,23 +96,23 @@
 
 <!-- ===== Header الموقع ===== -->
   <header class="heroo">
-      <h1 class="hleoo">تراثنا</h1>
-      <nav class="bloo">
-          <ul>
-              <li class="homme"><a href="#heroCarousel">الرئيسية</a></li>
-              <li class="clothess"><a href="#section-fashion">الأزياء التقليدية</a></li>
-              <li class="food"><a href="#food-section">الأكلات الشعبية</a></li>
-              <li><a href="#section-flip">كلام زمان </a></li>
-              <li class="phone"><a href="#footerf">تواصل معنا</a></li>
-
-                 <!-- أيقونة الصوت -->
-      <li class="audio-icon">
-        <i class="fa-solid fa-volume-high" id="audioControl"></i>
-      </li>
-    </ul>
-          </ul>
-      </nav>
-  </header>
+     <h1 class="hleoo">تراثنا</h1> 
+     <nav class="bloo"> 
+      
+      
+      <ul id="nav-links"> 
+        <li class="homme"><a href="#heroCarousel">الرئيسية</a></li> 
+        <li class="clothess"><a href="#section-fashion">الأزياء التقليدية</a></li> 
+        <li class="food"><a href="#food-section">الأكلات الشعبية</a></li> 
+        <li><a href="#section-flip">كلام زمان </a></li> 
+        <li class="phone"><a href="#footerf">تواصل معنا</a></li> 
+        <!-- أيقونة الصوت --> 
+         <li class="audio-icon"> <i class="fa-solid fa-volume-high" id="audioControl"></i> </li> 
+        </ul>
+         <!-- زر القائمة للهاتف --> 
+          <div class="menu-btn" id="menu-btn">&#9776;</div>
+         </nav> 
+        </header>
 
   <!-- ملف الصوت -->
 <audio id="heritageAudio" loop>
@@ -219,7 +221,7 @@
   </section>
 
   <!-- ===== Flip Section ===== -->
-  <section class="section-flip">
+  <section class="section-flip" id="section-flip">
     <h2 class="title">قالو ناس زمان...</h2>
     <div class="flip-wrap" >
       <!-- كل Flip Card كما عندك سابقاً -->
@@ -232,10 +234,6 @@
     </div>
   </section>
  
-
-
-
-
 
 <footer class="site-footer" id="footerf">
   <h3>ابقى على تواصل معنا</h3>
@@ -254,22 +252,25 @@
     <button type="submit">إرسال</button>
   </form>
 
-  <!-- زر البحث (أيقونة فقط) -->
-  <button id="showOpinions" class="search-btn" title="بحث">
-    <i class="fas fa-search"></i>
-  </button>
+ <!-- زر البحث (أيقونة فقط) -->
+<button id="showOpinions" class="search-btn" title="بحث">
+  <i class="fas fa-search"></i>
+</button>
 
-  <!-- صندوق مخفي للآراء -->
-  <div id="opinionsContainer">
-    <input type="text" id="searchInput" placeholder="بحث داخل الآراء...">
-    <div id="opinionsList"></div>
-  </div>
+<!-- صندوق الآراء -->
+<div id="opinionsContainer">
+  <h3>آراء الزوار</h3>
 
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 بحث داخل الآراء..."
+  >
+
+  <div id="opinionsList"></div>
+</div>
   <p class="footer-copy">&copy; 2025 تراثنا. كل الحقوق محفوظة.</p>
 </footer>
-
-
-
 
   <!-- JS Files -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -283,5 +284,6 @@
 
 
   
+
 
 
