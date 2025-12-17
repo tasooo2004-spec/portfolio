@@ -81,8 +81,7 @@ audioControl.addEventListener("click", () => {
 
 
 
-//JavaScript لتخزين البيانات ===== -->
-
+// ===== LocalStorage =====
 let opinions = JSON.parse(localStorage.getItem("opinions")) || [];
 
 const form = document.getElementById("footerForm");
@@ -93,22 +92,32 @@ const container = document.getElementById("opinionsContainer");
 const list = document.getElementById("opinionsList");
 const searchInput = document.getElementById("searchInput");
 
-/* حفظ الرأي */
-form.addEventListener("submit", e=>{
+let editIndex = null;
+
+/* حفظ / تعديل الرأي */
+form.addEventListener("submit", e => {
   e.preventDefault();
 
-  opinions.push({
-    email: emailInput.value,
-    text: opinionInput.value
-  });
+  if (editIndex === null) {
+    // إضافة رأي جديد
+    opinions.push({
+      email: emailInput.value,
+      text: opinionInput.value
+    });
+  } else {
+    // تعديل رأي
+    opinions[editIndex].email = emailInput.value;
+    opinions[editIndex].text = opinionInput.value;
+    editIndex = null;
+  }
 
   localStorage.setItem("opinions", JSON.stringify(opinions));
   form.reset();
-  alert("تم حفظ رأيك");
+  renderOpinions();
 });
 
-/* إظهار الصندوق */
-showBtn.addEventListener("click", ()=>{
+/* إظهار الآراء */
+showBtn.addEventListener("click", () => {
   container.style.display = "block";
   renderOpinions();
 });
@@ -116,7 +125,8 @@ showBtn.addEventListener("click", ()=>{
 /* البحث */
 searchInput.addEventListener("input", renderOpinions);
 
-function renderOpinions(){
+/* عرض الآراء */
+function renderOpinions() {
   const q = searchInput.value.toLowerCase();
   list.innerHTML = "";
 
@@ -125,14 +135,36 @@ function renderOpinions(){
       o.email.toLowerCase().includes(q) ||
       o.text.toLowerCase().includes(q)
     )
-    .forEach(o=>{
+    .forEach((o, index) => {
       list.innerHTML += `
         <div class="opinion-box">
           <strong>${o.email}</strong>
           <p>${o.text}</p>
+
+          <div class="opinion-actions">
+            <button onclick="editOpinion(${index})">تعديل</button>
+            <button onclick="deleteOpinion(${index})">حذف</button>
+          </div>
         </div>
       `;
     });
+}
+
+/* تعديل رأي */
+function editOpinion(index) {
+  emailInput.value = opinions[index].email;
+  opinionInput.value = opinions[index].text;
+  editIndex = index;
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+/* حذف رأي */
+function deleteOpinion(index) {
+  if (confirm("هل أنت متأكد من حذف الرأي؟")) {
+    opinions.splice(index, 1);
+    localStorage.setItem("opinions", JSON.stringify(opinions));
+    renderOpinions();
+  }
 }
 
 
@@ -142,6 +174,8 @@ const navLinks = document.getElementById('nav-links');
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
+
+
 
 
 
